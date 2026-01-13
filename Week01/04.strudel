@@ -1,0 +1,18 @@
+// @title W01-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by vigliensoni
+// @date Jan 11, 2026
+
+// 04
+samples('github:tidalcycles/dirt-samples')
+stack(
+
+  stack(
+  s("[bd sd]!2"),
+  s("hh*8").gain(0.2)
+  ).bank("RolandTR909"),
+  note("f#2 c#2 e2 f#2 e2 c#2 b1 c#2")
+      .sound("sawtooth")
+      .lpf(120)
+      .lpq(10)
+)

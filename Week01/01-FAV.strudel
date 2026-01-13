@@ -1,0 +1,9 @@
+// @title W01-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by vigliensoni
+// @date Jan 1, 2026
+
+// 01
+sound("bd [~ rim] mt [lt ht]")
+  .dist("2:0.5")
+  .chunk(4, x => x.hurry(2))

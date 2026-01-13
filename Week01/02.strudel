@@ -1,0 +1,10 @@
+// @title W01-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by vigliensoni
+// @date Jan 2, 2026
+
+// 02
+n("0*2 1 2 3 4 5 6 7")
+  .s("darbuka")
+  .gain(rand.range(0.25,0.75))
+  .cutoff(rand.range(800,4000))
