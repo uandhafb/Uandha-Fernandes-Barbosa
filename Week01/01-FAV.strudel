@@ -1,9 +1,11 @@
 // @title W01-01
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
-// @by vigliensoni
-// @date Jan 1, 2026
+// @by uandha
+// @date Jan 14, 2026
 
 // 01
-sound("bd [~ rim] mt [lt ht]")
-  .dist("2:0.5")
-  .chunk(4, x => x.hurry(2))
+$: note("<[c2 c3]*4 [bb1 bb2]*4 [f2 f3]*4 [eb2 eb3]*4>").sound("gm_voice_oohs").room(2)
+
+$: note("0/3").sound("numbers").gain(0.5).room("5").pan(sine.slow(2))
+
+$: s("{<[numbers:0/3 ~ numbers:3/2 ~ numbers:2/5]>, numbers:1/7}").room(3).gain(0.35).jux(press)
