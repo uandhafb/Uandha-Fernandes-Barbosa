@@ -3,6 +3,11 @@
 // @by uandha
 // @date Jan 14, 2026
 
+// gain function to control the volume
+// room function to give reverb
+//pan function to stereo distribution
+// [] polyr x {} polym - composed times 
+
 // 01
 $: note("<[c2 c3]*4 [bb1 bb2]*4 [f2 f3]*4 [eb2 eb3]*4>").sound("gm_voice_oohs").room(2)
 
