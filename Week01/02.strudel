@@ -1,10 +1,22 @@
-// @title W01-02
+// @title W02- rythmic and pattern study
+// @inspired by 01-FAV by vigliensoni
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
-// @by vigliensoni
-// @date Jan 2, 2026
+// @by uandha
+// @date Jan 15, 2026
 
-// 02
-n("0*2 1 2 3 4 5 6 7")
-  .s("darbuka")
-  .gain(rand.range(0.25,0.75))
-  .cutoff(rand.range(800,4000))
+// samples use function note ()
+// drum-machine use function s()
+// chunk  divides a pattern into a given number of parts
+//s: allows new lines playing together
+
+$:s("{doepferms404_lt [~ doepferms404_oh] jazz:2 [lt dmx_ht], ~ ~ ~ ~ viscospacedrum_bd:1, cp cp cp cp, ~ korgddm110_cp }")
+
+$:s(" <~ tr909_ht tr909_lt>").dist(2)
+
+$:note("c*8").s("space:1").gain(0.5).pan("0 1 0 1 0 1")
+
+$:note("f0@ 3 ~").s("wt_digital_crickets").room(2)
+
+//$:s("gm_applause:1").chunk(4, x => x.hurry(2)).room(3)
+
+//$:note(" < ~ d2 ~ > ").sound("gm_cello:4").room(5).vib("<.5 1 2 4 16>").vibmod("<.25 .5 1 2 12>") .chunk(4, x => x.hurry(2))
