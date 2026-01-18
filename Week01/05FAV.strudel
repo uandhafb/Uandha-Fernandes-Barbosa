@@ -1,0 +1,26 @@
+// @title W01-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Jan 18, 2026
+
+// 5
+$: s("bd*4")
+  .bank("RolandTR909").lpf(4000).gain(1.3).shape(0.7)
+
+$: note ("[<g2 g2 g2 g2> g3] [eb2*6] [c2 c2 c2] [eb2 [g1*3 d1/3]/2 c2 c2]")
+  .slow(4).s("supersaw").gain(0.9).room(2)
+
+$: s("~ cp ~ cp")
+   .bank("RolandTR909").speed(1.2).room(1)
+
+$: s("~ [cp:2, clap] ~ [cp:2, clap]")
+    .bank("RolandTR909").room(2).gain(0.9)
+
+$: s("~ hh ~ [hh ~] ~ hh ~ hh")
+    .bank("RolandTR909").gain(0.9). pan(sine.slow(2))
+
+$: s("~ sd ~ [sd ~ ~ sd]")
+  .bank("RolandTR909").jux(rev).gain(0.5).room(2)//.gain(0.75).room(2).jux(rev).gain(0.5)
+
+//$: note("c6*16")
+    //.s("z_square").decay(0.05).pan(sine.slow(10)).gain(0.2).room(9)
