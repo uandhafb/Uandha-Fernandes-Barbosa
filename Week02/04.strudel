@@ -1,0 +1,23 @@
+
+setcpm(130/1)
+
+
+$: stack(
+  s ("bd").bank("korgkr55").beat("0,7?,11?0.2",16),
+  s ("sd").bank("microrhythmer12"),
+  s ("hh:4").jux(press).pan("<.5 1 .5 0>"),
+  
+).scope().gain(0.8)
+
+$: stack (
+  note("d1!3").s("sine").penv(27).distort("8:.4"),
+  
+).gain(0.007)
+
+$: stack (
+  note("<c#*8 f d#*16 <[f2?0.2 a#]>/5>/2")
+  .s("supersaw")
+  .room(2)
+  .gain(0.4)
+ 
+)
