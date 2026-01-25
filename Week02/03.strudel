@@ -1,0 +1,16 @@
+// changing setcpm pattern 
+
+
+//setcpm(110/2)
+//setcpm(120/3)
+setcpm(120/1)
+//setcpm(180/2)
+
+
+$: note("[[<a4 c5 f5 d4>], d3(4,7 < 1, 0 , 0>)]").s("tubularbells").slow(1).room(2)
+
+$:  s("cowbell").room(2).pan(sine.slow(10))
+
+$: s(" ~ ~ bd bd bd ~ ~").bank("tr707")
+
+$: s("<[~ [bd!8]] ~ ~ >").bank("RolandTR808")
