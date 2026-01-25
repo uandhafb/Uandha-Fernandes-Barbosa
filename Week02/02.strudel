@@ -1,0 +1,21 @@
+// stack usage - control each line for composing 
+// audio effects
+//chords, voicing
+
+
+setcpm(110/4)
+
+$: stack(
+  s("bossdr220_ht(3,8, <2,0,1,0,0 >)")
+  .lpf(200)
+  .gain(0.3)  
+  )
+
+$: stack( 
+     n(run("<4 16/8>"))
+    .chord("<C^7, Db^7 <Fmˆ7 Dm7>>")
+    .voicing().add(note("<1 2>/4"))
+    .dec(.1)
+    .pan(sine.slow(10)) 
+    //.fast(2)
+  )
