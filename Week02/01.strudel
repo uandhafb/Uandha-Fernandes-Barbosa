@@ -1,0 +1,23 @@
+// stack usage - control each line for composing 
+// euclidean rhythms
+//import sounds
+
+samples({
+
+  b1: 'https://cdn.freesound.org/previews/338/338278_1216015-hq.mp3',
+  b2: 'https://cdn.freesound.org/previews/517/517736_9996727-lq.mp3',
+  b3: 'https://cdn.freesound.org/previews/607/607889_7405868-lq.mp3',
+  b4: 'https://cdn.freesound.org/previews/64/64063_634166-lq.mp3',
+  
+})
+
+samples('github:tidalcycles/dirt-samples')
+setcps(130/60/6)
+
+$: stack(
+  
+  s("[voodoo:2(5,16,<0 2 0 3 >)]*2"),
+  s("[~ b2? ~]*3").gain (0.5),
+  s("[mouth:1*16?0.2|mouth:2*32?0.7 < mouth:2 (3,8)*6>]"),
+  s("[mouth:3 (3,8, <0,1,0>) | [b3(3,8 <0 0 1>) b1(2,8)*3]]"),
+  s(" [ ~ ~ | ~ [b4*2?0.2 | ~ b4?0.3]]").gain(0.3).pan(sine),
