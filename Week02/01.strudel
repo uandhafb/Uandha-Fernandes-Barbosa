@@ -2,6 +2,11 @@
 // euclidean rhythms
 //import sounds
 
+// @title W02-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Jan 25, 2026
+
 samples({
 
   b1: 'https://cdn.freesound.org/previews/338/338278_1216015-hq.mp3',
