@@ -1,0 +1,47 @@
+samples('github:tidalcycles/dirt-samples')
+ 
+$: stack(
+           s("subroc3d:3")
+          .color ("purple")
+          .gain (slider(0.357))
+          .pan("<.5 1 .5 0>")
+          .scrub("{<0.5!4 0.1!6?> 0.8!3 <0.2:2 0.3:1>}"),
+
+        s("[yeah*16?0.3 ~ yeah?0.2]?0.2")
+         .color("red")
+         .gain (slider(0.751))
+         .room(3)
+         .pan("<1 0>")
+         .delay(0.3),
+        
+        s("speech:2")
+         .color("orange")
+         .gain (slider(0.102))
+         .scrub("{<0.5!4 0.1!6?> 0.8!3 <0.2:2 0.3:1>}")
+         .pan("<.2 0.7 .2 0>")
+         .dist(2),
+
+
+        s("subroc3d:2")
+            .color("green")
+            .slow(8)
+            .gain (slider(0.383))
+            .room(2)
+            .begin("< 0 .25 .5 .75, 0.2 0.3 0.7 >"),
+          
+
+        s("ulgab:1")
+         .color("purple")
+         .slice(7, "<[0 0][<1 2> 1][<2 3> 2]> ")
+         .pan(sine.slow(10))
+         .room(2)
+         .gain (slider(0.306))
+         .speed("[1 2 4 1 -2 -4]").fast(1.5),
+
+         s("wobble:1")
+         .striate(9)
+         .gain(0.3)
+         .room(1)
+         .speed("[1 -4 -2 1]")
+           
+ ).pianoroll({horizontal:1})
