@@ -2,3 +2,12 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by uandha
 // @date Feb 02, 2026
+
+
+samples('github:tidalcycles/dirt-samples')
+
+$: s("triangle*16").decay(0.5).n(irand(12)).scale('E minor').room(1).roomsize(10).orbit(2).gain (slider(0.459))
+                                             
+$: s("bd*4 (2,8)").room(0.01).roomsize(0.01).lpf(150)
+   
+$: n(`<[5 - 5*2 5]*16 [5*2 5 - 5*2]*3 [8*5 7]*2 >,<[3 - 6 7]*5?0.5 [6*2 - 6*2 6*2]*2 [7*2 - 6 -]*2>`).sound("speedupdown").gain(0.1).delay(0.2)
