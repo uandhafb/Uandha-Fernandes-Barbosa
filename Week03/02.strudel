@@ -1,0 +1,18 @@
+// @title W02-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Jan 25, 2026
+
+samples('github:tidalcycles/dirt-samples')
+  
+$:  stack( 
+              chord("<Dm*3 | Gm9?0.2>")
+             .s("xmas").voicing()
+             .speed("1 2 3 [-3 -3 -3 -3]")
+             .struct("[x*4 x*8]")
+             .dec(0.1).dec(.1).delay(0)
+             .delay(0.1)
+             .vibmod("<.25 .5 1 2 12>:8")
+             .lpf(500), 
+
+  )      
