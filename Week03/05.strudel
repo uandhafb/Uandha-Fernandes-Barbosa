@@ -1,0 +1,110 @@
+
+  // --- STOCKHAUSEN VIBES--------------------------------------
+
+
+  // --- BLOCK 1--------------------------------------
+samples('github:tidalcycles/dirt-samples')
+
+$: stack(
+
+
+  s("glitch")
+    .n("0 4 2 7")
+    .jux(rev)
+    .hpf(2200)
+    .bpf(sine.slow(12).range(1200, 7200))
+    .bpq(sine.slow(9).range(0.25, 0.98))
+    .delay(0.08).decay(0.85)
+    .speed("<3.95 4 4.03 4.01>")
+    .gain(sine.fast(10).range(0.15, 0.75))
+    .pan(sine.slow(5)),
+
+ 
+  s("noise")
+    .segment("<8 16 32 16>")
+    .gain(sine.slow(6).range(0.0, 0.9))
+    .bpf(sine.slow(10).range(120, 9000))
+    .bpq(sine.slow(7).range(0.12, 0.97))
+    .pan(saw.slow(3))
+    .room(2.8).sz(0.9),
+
+
+  note("<c2 [~ eb5] ~ [g6 ~ a1]>")
+    .s("piano")
+    .ply("<1 2 1 4>")
+    .lpf(sine.slow(16).range(500, 1900))
+    .hpf(sine.slow(20).range(40, 240))
+    .room(1.1).sz(0.8)
+    .gain(slider(0.216))
+    .pan(sine.slow(1.7).range(-0.4, 0.4)),
+
+
+  s("sine")
+    .freq(saw.slow(18).range(40, 6200))
+    .crush(sine.slow(2.2).range(1, 10))
+    .gain(0.12)
+    .bpf(sine.slow(14).range(300, 8000))
+    .bpq(0.96)
+    .pan(sine.slow(0.7))
+    .room(6).sz(0.92),
+
+  s("noise")
+    .segment("<16 32>")
+    .gain(sine.slow(8).range(0.02, 0.22))
+    .bpf("<250 500 1000 2000 3200 5200 7800>")
+    .bpq(0.985)
+    .pan(sine.slow(9))
+    .room(4.2).sz(0.95)
+
+ )._spectrum()
+
+  // --- BLOCK 2--------------------------------------
+
+// $: stack(
+
+//   s("glitch")
+//     .n("<0 ~ ~ ~ 4 ~ ~ ~ 2 ~ ~ 7>")
+//     .hpf(200)                         
+//     .lpf(1800)                        
+//     .bpf(sine.slow(18).range(180, 1400))
+//     .bpq(sine.slow(14).range(0.7, 0.98))
+//     .delay("<0.25 0.4 0.55 0.7>").decay(0.95)
+//     .speed("<0.5 0.75 1 0.6>")        
+//     .gain(sine.slow(10).range(0.02, 0.22))
+//     .pan(sine.slow(4).range(-0.6, 0.6))
+//     .room(4).sz(0.95),
+
+ 
+//   s("noise")
+//     .segment("<64 32 48>")
+//     .gain(sine.slow(12).range(0.03, 0.35))
+//     .lpf(2200)
+//     .bpf(sine.slow(24).range(70, 2200))
+//     .bpq(sine.slow(16).range(0.4, 0.995))
+//     .crush(sine.slow(6).range(2, 14)) 
+//     .pan(saw.slow(6))
+//     .room(7).sz(0.98),
+
+  
+//   note("<c1 ~ ~ [eb2 ~] ~ ~ [g2] ~>")
+//     .s("piano")
+//     .ply("<1 1 2 1 1 3>")
+//     .hpf(20)
+//     .lpf(sine.slow(22).range(250, 1200))
+//     .delay("<0.0 0.25 0.5 0.75>").decay(0.88)
+//     .gain(slider(0.13))
+//     .pan(sine.slow(2).range(-0.25, 0.25))
+//     .room(5).sz(0.96),
+
+  
+//   s("sine")
+//     .freq(sine.slow(30).range(30, 220))
+//     .lpf(900)
+//     .bpf(sine.slow(26).range(60, 600))
+//     .bpq(sine.slow(18).range(0.6, 0.99))
+//     .crush(sine.slow(10).range(1, 9))
+//     .gain(sine.slow(14).range(0.02, 0.12))
+//     .pan(sine.slow(1.2))
+//     .room(9).sz(0.99)
+
+// )._spectrum()
