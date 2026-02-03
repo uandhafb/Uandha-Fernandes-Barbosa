@@ -48,6 +48,6 @@ $: stack(
          .striate(9)
          .gain(0.3)
          .room(1)
-         .speed("[1 -4 -2 1]")
+         .speed("[1 -4 -2 1]"),
            
- ).pianoroll({horizontal:1})
+ )._spiral({ logSpiral: 0, padding: 0.5, stretch:3})
