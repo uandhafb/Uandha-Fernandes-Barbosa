@@ -2,3 +2,46 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by uandha
 // @date Feb 02, 2026
+
+setcps(130/60/4)
+
+samples('github:tidalcycles/dirt-samples')
+
+stack(
+
+     note("<c2 d2>(3,8)").s("square")
+    .pickF("<0 2> 1", [jux(rev),fast(2),x=>x.lpf(800)])
+    .room(1),
+
+    s("popkick")
+   .struct("x ~ x ~ ~ x ~ x ~ ~")
+   .slow(1)
+   .gain(0.5),
+        
+    s("[numbers:3 | numbers:5]")
+   .struct("x(3,8) [x ~ x]*2 x(5,16,2) [x*4]")
+   .gain(slider(0.367))
+   .room(2)
+   .pan(sine.slow(2)),
+
+   note("c3 [e3, g3] a3")
+  .struct("x(3,8) [x ~ x]*2 x(5,16,2) [x*4]") 
+  .s("sawtooth") 
+  .cutoff(sine.range(200, 4000).fast(8))     
+  .resonance(10)
+  .pan(sine.fast(4))                         
+  .delay(0.5)
+  .room(0.8)
+  .clip(1),                                   
+  
+  n("0 [2 4] 6 [7 12]*3")          
+    .scale("phrygian")             
+    .add("<0 7 -5 12 24>")         
+    .s("square")
+    .jux(x => x.rev().fast(1.5))   
+    .speed("1 2 0.5 4")            
+    .crush(4)                      
+    .delay(0.4).decay(0.1)
+    .gain (0.3),
+  
+).pianoroll({ cycles: 5})
