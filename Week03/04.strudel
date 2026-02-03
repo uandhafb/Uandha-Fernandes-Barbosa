@@ -17,12 +17,13 @@ stack(
    .struct("x ~ x ~ ~ x ~ x ~ ~")
    .slow(1)
    .gain(0.5),
-        
-    s("[numbers:3 | numbers:5]")
-   .struct("x(3,8) [x ~ x]*2 x(5,16,2) [x*4]")
-   .gain(slider(0.367))
-   .room(2)
-   .pan(sine.slow(2)),
+
+  //------------------------Transition Block
+   //  s("[numbers:3 | numbers:5]")
+   // .struct("x(3,8) [x ~ x]*2 x(5,16,2) [x*4]")
+   // .gain(slider(0))
+   // .room(2)
+   // .pan(sine.slow(2)),
 
    note("c3 [e3, g3] a3")
   .struct("x(3,8) [x ~ x]*2 x(5,16,2) [x*4]") 
