@@ -1,8 +1,14 @@
+// @title W03-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 02, 2026
+  
 
-  // --- STOCKHAUSEN VIBES--------------------------------------
+// --- STOCKHAUSEN VIBES--------------------------------------
 
+Take care with volume in Block 1
 
-  // --- BLOCK 1--------------------------------------
+// --- BLOCK 1--------------------------------------
 samples('github:tidalcycles/dirt-samples')
 
 $: stack(
