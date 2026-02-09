@@ -1,0 +1,25 @@
+
+setCps(128/60/4)
+
+
+ $: stack(
+note("[c2 [g2*2] d2 <f1 [f2 c3]>]*3?0.2")
+    .room(0.2).size(0.8) 
+    .crush("<8 4 12 6>")
+    .pan(brand)
+
+ ).every(5, x=>x.fast(5).ply("<2 4 3>")).gain(0.3)
+
+$: stack (
+   
+         note("c1*8")
+         .s("supersaw")
+         .decay(0.1)
+         .lpf(sine.range(200, 800).fast(0.5)) 
+         .lpq(5),
+
+
+         note("c2 g2!2 d2 f1")
+        .s(wchoose(["sine",10], ["triangle",1], ["bd:6",1])),
+  
+).segment(16).degradeBy(.5).gain(0.8)
