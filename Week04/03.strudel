@@ -3,10 +3,9 @@
 // @by uandha
 // @date Feb 09, 2026
 
-//pan (brand)
+//pan (brand) and segment
 
 setCps(128/60/4)
-
 
  $: stack(
 note("[c2 [g2*2] d2 <f1 [f2 c3]>]*3?0.2")
@@ -23,7 +22,6 @@ $: stack (
          .decay(0.1)
          .lpf(sine.range(200, 800).fast(0.5)) 
          .lpq(5),
-
 
          note("c2 g2!2 d2 f1")
         .s(wchoose(["sine",10], ["triangle",1], ["bd:6",1])),
