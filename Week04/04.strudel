@@ -1,0 +1,21 @@
+//musique concrete tapes attempting 1
+
+samples('github:tidalcycles/dirt-samples')
+
+setCps(150/60/4)
+
+$: stack(
+  
+     n("13 .. 0").scale('pelog')
+     .s("tablex")
+     .range(0.5, 1.2).gain(sine.slow(8))
+     .gain(0),
+
+  ).every(7,x=>x.rev().gain(0.5))
+
+$: stack(
+
+   n("1 .. 28").scale("<c1:piongio!6 d2:scriabin?0.2>")
+  .orbit("1 .. 2")
+  .s("sundance")
+).pickF("<0 2> 1", [jux(rev),slow(2),x=>x.lpf(800)])
