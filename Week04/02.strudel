@@ -1,0 +1,27 @@
+setcps(125/60/4);
+
+$: stack(
+
+  s("bd(3,8), [~ sd], [hh*8]")
+  .bank("tr909")
+  .gain(1.2)
+  .room(0.05),
+  
+
+  s("~ <hc!3 [hc*2]>")
+    .bank("tr909")
+    .crush(3)
+    .pan(0.8)
+    .gain(0.4),
+
+).every(2, x=>x.fast(2).pan("<.5 .5 >").gain(0.3))
+
+$: stack (
+
+note("c2(3,8), <f2 g2>(3,8)")
+    .s("supervibe")
+    .lpf("<400 600 800 1200>")
+    .decay(0.15)
+    .gain(0.7),
+  
+).every(5, x=>x.slow(5).ply("<2 7 3>").gain(0.3))
