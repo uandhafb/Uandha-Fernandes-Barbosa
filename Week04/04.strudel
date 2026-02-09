@@ -1,3 +1,8 @@
+// @title W04-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 09, 2026
+
 //musique concrete tapes attempting 1
 
 samples('github:tidalcycles/dirt-samples')
