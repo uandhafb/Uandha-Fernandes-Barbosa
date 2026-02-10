@@ -3,8 +3,12 @@
 // @by uandha
 // @date Feb 09, 2026
 
-
 ----------------------------------
+FOR NOW: This project uses MIDI output (via Strudel) mapped to visual behaviors (the moving stars).
+MIDI SETUP REQUIRED:
+   - On macOS, this uses the IAC Driver.
+As a result:
+   - The site works best on desktop/laptop browsers.
 OPEN THE LINK: https://andromeda-web.onrender.com 
 AND PAST THE CODE BELLOW 
 -------------------------------------------------------------
