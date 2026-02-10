@@ -1,0 +1,72 @@
+samples('github:tidalcycles/dirt-samples')
+
+
+$: stack(
+  
+  note("c4(3,8), <e5 [g4, b4]>(1,4)")
+    .s("vibraphone_bowed:4")
+    .palindrome()
+    .gain(0.1)
+    .delay(0.2)
+    .phaser(2).phasercenter("<800 2000 4000>")
+    .midi('IAC Driver')
+    .midichan(1),
+
+   note("a1")
+     .s("pipeorgan_loud_pedal")
+     .gain(0.05)
+     .midi('IAC Driver')
+     .midichan(3),
+
+
+  note("c4(3,8), <e5 [g4, b4]>(1,4)")
+    .s("vibraphone_bowed:4")
+    .gain(0.1)
+    .palindrome()
+    .room(2)
+    .delay(0.2)
+    .phaser(2).phasercenter("<800 2000 4000>"),
+  
+   note("a1")
+     .s("pipeorgan_loud_pedal")
+     .gain(0.05),
+  
+).every(7, x=> x.lpf(sine.range(100, 1200).slow(8)))
+
+ $:stack(
+   
+  note("[c1 <d2 eb1!3>, [e3 f4]?]")
+   .scale('bb minor')
+   .s("breath")
+   .room(2)
+   .gain(0.4),
+
+   note("[c1 <d2 eb1!3>, [e3 f4]?]")
+   .scale('bb minor')
+   .s("breath")
+   .room(2)
+   .gain(0.4)
+   .midi('IAC Driver')
+   .midichan(7),   
+   
+ ).every(3, x=> x.hurry(2).pan("<.5 1 .5 0>"))
+
+$: stack(
+
+  n( "[15 14 13 12 11 10 9 8 7]*3 | [1 3 4 2 5 6]?0.2")
+  .scale("bb:minor")
+  .s("breath:5")
+  .room(2)
+  .gain(0.4)
+  .every(3, x=>x.hurry(5)),  
+
+  n( "[15 14 13 12 11 10 9 8 7]*3 | [1 3 4 2 5 6]?0.2")
+  .scale("bb:minor")
+  .s("breath:5")
+  .room(2)
+  .gain(0.4)
+  .every(3, x=>x.hurry(5))
+  .midi('IAC Driver')
+  .midichan(9),  
+  
+).every(5, x=>x.slow(5).degradeBy(0.5))
