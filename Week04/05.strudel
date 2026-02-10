@@ -1,5 +1,14 @@
-samples('github:tidalcycles/dirt-samples')
+// @title W04-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 09, 2026
 
+
+----------------------------------
+OPEN THE LINK: https://andromeda-web.onrender.com 
+AND PAST THE CODE BELLOW 
+-------------------------------------------------------------
+samples('github:tidalcycles/dirt-samples')
 
 $: stack(
   
