@@ -1,3 +1,8 @@
+// @title W05-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 15, 2026
+
 //First Exploration Cellphone Motion
 
 setcpm(120/4)
@@ -23,5 +28,5 @@ $: stack (
         s("bd!2")
          .beat("0,8,11,13",16).bank('emudrumulator'),
               
-). room (1).size(3)//.speed(tri.fast(2))//.speed(tri.fast(gravityY.range(0,2)))
+).room (1).size(3)//.speed(tri.fast(2))//.speed(tri.fast(gravityY.range(0,2)))
   
