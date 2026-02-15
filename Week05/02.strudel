@@ -1,0 +1,24 @@
+// @title W05-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 15, 2026
+
+$: stack(
+
+        s("bd:1")
+        .struct("<x!7>*5")
+        .gain (slider (0.5))
+        .room(1)
+        .compressor("-20:20:10:.002:.02")
+        .postgain(1.5)
+        .beat("0,4,8,11,14",16) // changes 3, 5, 7, 16
+        .speed(tri.segment(3).range(1,5)) // changes 3, 9 -> 1,5 to 3,5
+        .color ("orange"),
+
+        note ("<<c1!4 [c2 c3]!2>>*2").s("flexatone!3 kalimba3")
+         .n(irand(9))
+         .room (2)
+         .every (7, x=>x.rev())
+         .pan(sine.fast(8)),
+  
+).scope()
