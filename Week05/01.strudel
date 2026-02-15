@@ -1,0 +1,26 @@
+// @title W05-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 15, 2026
+
+
+$: stack (
+
+     note (`< [0,3,7]
+              [12, 3, 7]
+              [12, 15, 7]
+              [12, 15, 19]>*16`
+          .add(" <c2 d3 f3 c4>") )
+          .s("supersaw,ballwhistle" )
+          .gain(slider (0.163))
+          .room (1).size(5),
+  
+).speed(saw.slow(2).add(1)).pan(square.fast(8))
+
+$:stack (
+  
+    s("timpani_roll:2")
+   .struct("x ~ x ~ ~ x ~ x ~ ~ ~ x ~ x ~ ~")
+   .room(3).size(7),
+  
+).every(4, x=>x.speed(tri.segment(8).range(1,5).gain(".7!2 1 .8!2 1 .9 1").pan(rand)))
