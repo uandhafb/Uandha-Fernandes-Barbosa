@@ -1,0 +1,24 @@
+//Mouse Application
+
+setcpm (167/4)
+
+$pad: n("<0>*8".add("0,9,5,13").add(4))
+      .scale("a:minor").s("supersaw")
+      .detune(0.3)
+      .gain(0.1)
+      .pan(rand)
+      .room(1).delay(0.3)
+
+$pad2: n(irand(10).sub(7).seg(16))
+       .scale("a:minor").s("saw")
+       .add(tri.slow(8).seg(16))
+       .pan(sine.fast(3))
+       .delay(0.6)
+       .lpenv(5)
+       .lpf(200)
+       .room(2)
+       .lpf(mousex.range(100,10000))
+       .delayt(0.33)
+       .delayfb(mousey.range(0,1))
+       .delay(mousex.range(0,1))
+ 
