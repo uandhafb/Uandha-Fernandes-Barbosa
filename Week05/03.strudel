@@ -1,0 +1,27 @@
+//First Exploration Cellphone Motion
+
+setcpm(120/4)
+
+enableMotion()
+samples('github:tidalcycles/dirt-samples')
+
+$: stack(
+     
+        n("<0 4 2 3 7>*8".add("<0 0 5 2>*12")).add("<0 1 5 2>*15")
+        .scale ("a:dorian").s("arp:2")//.speed(saw.slow(3))
+        .delay(rand)
+        .room(3)
+        .vib(2)
+        .gain(slider (0.251)),
+)//.speed(tri.segment(8))//(rotZ.range(0.2, 0.5))
+
+$: stack (
+
+        s("bd:4!4")
+         .beat("0,4,8,11,14",16).duckorbit(2).duckattack(0.2).duckdepth(1),
+
+        s("bd!2")
+         .beat("0,8,11,13",16).bank('emudrumulator'),
+              
+). room (1).size(3)//.speed(tri.fast(2))//.speed(tri.fast(gravityY.range(0,2)))
+  
