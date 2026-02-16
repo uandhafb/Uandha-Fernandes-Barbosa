@@ -3,16 +3,15 @@
 // @by uandha
 // @date Feb 15, 2026
 
+//arrange and functions old 2D videogame vibes
 
 samples('github:tidalcycles/dirt-samples')
 samples('github:uandhafb/cart398ufb')
 samples({hadouken: 'https://cdn.freesound.org/previews/67/67674_111920-lq.mp3'})
 
-
 setcps(70/60)
 
-function base(){
-  
+function base(){  
   return stack (
   
      note("e1 [e1*2] g1 a1")
@@ -27,13 +26,13 @@ function base(){
 
 function drum(){
   return stack (
+
      s("bd")
      .struct("x ~ ~ x ~ ~ x ~")
      .lastOf(5, invert)
  )}
 
-function pad(){
-      
+function pad(){   
   return stack (
      
       n("3 5 8 2")
@@ -48,7 +47,7 @@ function pad(){
 
 
 function pad2(){
-     return stack (
+  return stack (
 
      n( "[15 14 13 12 11 10 9 8 7]*3 | [1 3 4 2 5 6]?0.2")
     .scale("mixolydian")
@@ -62,6 +61,7 @@ function pad2(){
 
 function pad3(){
      return stack(
+
      s("hadouken").every(2, x=>x.struct("x ~ x?0.3 ~ ~ x?0.2 ~ x ~"))
      .slow(2)
      .room(1)
