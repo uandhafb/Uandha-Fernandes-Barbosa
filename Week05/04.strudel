@@ -3,7 +3,7 @@
 // @by uandha
 // @date Feb 15, 2026
 
-//Mouse Application in a simple textural layer.
+//Mouse Application in a simple textural layer.The mouse's xy position value ranges from 0 to 1.
 
 setcpm (167/4)
 
