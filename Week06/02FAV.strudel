@@ -1,3 +1,8 @@
+// @title W06-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 23, 2026
+
 samples('github:tidalcycles/dirt-samples')
 samples('github:mot4i/garden')
 
