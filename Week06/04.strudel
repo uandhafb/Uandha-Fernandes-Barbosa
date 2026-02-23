@@ -1,0 +1,35 @@
+setcpm(124/4)
+
+
+samples('github:tidalcycles/dirt-samples')
+
+$: stack(
+  
+    s("bd:5*4").bank("tr505"), 
+    s("~ cp").room(0.3), 
+    s("hh*8").bank("korgminipops"), 
+    s("~ [oh!2]").bank("tr909").pan(rand)
+  
+).every(9, x=>x.degradeBy(0.2)).gain(tri.slow(3))
+
+
+$: stack(
+  
+   note("e1 [e1*2] g1 a1")
+  .s("sawtooth")
+  .lpf(1000).lpq(15)
+  .cutoff(perlin.fast(5).range(100,6000)).pan(perlin.fast(7))
+
+
+  )
+
+
+$: stack(
+  
+  note("e3(3,8), g3(5,8)")
+  .s("triangle")
+  .adsr(0.01, 0.1, 0, 0) 
+  .delay(0.2).delayfeedback(0.3)
+  .cutoff(perlin.range(100,6000)).pan(perlin.fast(3))
+  
+  )
