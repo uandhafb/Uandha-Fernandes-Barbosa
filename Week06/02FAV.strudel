@@ -6,6 +6,10 @@
 samples('github:tidalcycles/dirt-samples')
 samples('github:mot4i/garden')
 
+await initHydra()
+let pattern = "1 4 5 [6 7]*2"
+shape(H(pattern)).out(o0)
+
 let fun1= stack( 
   
   s("[bd <hh oh>]*2").dec(.4).bank("garden"),
@@ -30,7 +34,7 @@ let fun3= stack(
 
  sound("bd ~ [~ bd] ~ bd ~ [[~ bd*2] bd] ~").slow(2).bank("garden"),  
 
-  n("1").sound("rave").pan(rand).delayfb(0.8).pan(sine),
+  n("1").sound("rave").pan(rand).delayfb(0.8),
 )
 
 
@@ -42,6 +46,7 @@ let fun4= stack(
  $: arrange(
    [8, fun1],
    [4, fun2],
-   [4, fun3.room(saw.slow(3)).gain(saw.slow(4).range(0.5, 1))],
+   [4, fun3.room(saw.slow(3)).gain(saw.slow(4).range(0.3, 0.7))],
    [4, fun4.gain(tri.slow(4).range(0.5, 1))]
  )
+
