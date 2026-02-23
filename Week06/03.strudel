@@ -1,5 +1,9 @@
+// @title W06-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 23, 2026
+
 await initHydra({feedStrudel:1})
-//
 src(s0).kaleid(H("<4 5 3 4 6>"))
 .diff(osc(0.2,0.5,5))
 .modulateScale(osc(-2,-0.25,1))
