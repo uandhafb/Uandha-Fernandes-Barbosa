@@ -1,5 +1,9 @@
-setcpm(124/4)
+// @title W06-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Feb 23, 2026
 
+setcpm(124/4)
 
 samples('github:tidalcycles/dirt-samples')
 
@@ -33,3 +37,4 @@ $: stack(
   .cutoff(perlin.range(100,6000)).pan(perlin.fast(3))
   
   )
+
