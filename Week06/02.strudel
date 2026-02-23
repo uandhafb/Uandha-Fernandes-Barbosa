@@ -1,0 +1,42 @@
+samples('github:tidalcycles/dirt-samples')
+samples('github:mot4i/garden')
+
+let fun1= stack( 
+  
+  s("[bd <hh oh>]*2").dec(.4).bank("garden"),
+
+  s("bd*6").speed("[1 2 4 1 -2 -4]").fast(1.5).bank("tr909"),
+
+  n("4").sound("rave").pan(rand).speed(1),
+  
+  n("[~ 2]!5").sound("bd"),
+)
+
+
+let fun2= stack (
+
+        n("[~ 4]!2").sound("bd").bank("garden"),
+
+        n("4").sound("rave").pan(rand),  
+)
+
+
+let fun3= stack(
+
+ sound("bd ~ [~ bd] ~ bd ~ [[~ bd*2] bd] ~").slow(2).bank("garden"),  
+
+  n("1").sound("rave").pan(rand).delayfb(0.8).pan(sine),
+)
+
+
+let fun4= stack(
+
+  n("3").sound("rave").pan(rand).delayfb(0.8).room(1).size(7),
+)
+
+ $: arrange(
+   [8, fun1],
+   [4, fun2],
+   [4, fun3.room(saw.slow(3)).gain(saw.slow(4).range(0.5, 1))],
+   [4, fun4.gain(tri.slow(4).range(0.5, 1))]
+ )
