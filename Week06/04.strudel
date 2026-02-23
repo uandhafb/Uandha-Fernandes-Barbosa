@@ -24,7 +24,6 @@ $: stack(
   .lpf(1000).lpq(15)
   .cutoff(perlin.fast(5).range(100,6000)).pan(perlin.fast(7))
 
-
   )
 
 
