@@ -1,0 +1,23 @@
+samples('github:tidalcycles/dirt-samples')
+
+$: stack(
+
+  n(`<
+[~ 0] 2?0.5 [0 2] [~ 2]
+[~ 0] 1 [0 1] [~ 1]
+[~ 0] 3?0.3 [0 3] [~ 3]
+[~ 0] 2 [0 2?0.2] [~ 2]
+>*4`).scale("A3: minor")
+.sound("industrial").jux(rev()),
+  
+  ).room(1).size(3).speed(tri.segment(8).range(1,5)).gain(slider(0.244))
+
+$: n("0 1 [4 3] 2 0 2 [~ 3] 4").sound("techno").pan(rand).gain(0.1).every(5, x=>x.fast(2))
+
+$: stack(
+  
+  n("0 1 [4 3] 2 0 2 [~ 3] 4")
+  .sound("tok")
+  .pan(tri.slow(2)).rev(),
+  
+).every(2, x=>x.speed(3)).slow(1).delayt(0.1).delayfb(0.05).delay(0.25)
