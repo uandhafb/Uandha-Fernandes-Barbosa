@@ -1,0 +1,39 @@
+await initHydra({feedStrudel:1})
+//
+src(s0).kaleid(H("<4 5 3 4 6>"))
+.diff(osc(0.2,0.5,5))
+.modulateScale(osc(-2,-0.25,1))
+.out()
+
+$: stack(
+  
+  s("bd:5*4").gain(1.2), 
+  s("~ cp").delay(0.1).room(0.2), 
+  s("hh*8").gain(0.8), 
+  s("~ [oh!3]")
+  
+)
+
+$: stack (
+
+  note("e1 [e1*2] g1 a1")
+  .s("supersaw")
+  .lp(800)
+  .adsr(0.01, 0.2, 0.1, 0.1)
+  .gain(tri.fast(10)),
+  
+)
+
+$: stack(
+  
+note("e3(3,8), g3(3,8), b3(3,8)")
+  .s("square")
+  .lpf(sine.range(500, 2500).slow(4)) 
+  .jux(rev) 
+  .gain(0.5)
+  .room(2).size(3)
+  .pan(saw.slow(5)),
+  
+)
+
+all(x=>x.fft(7).scope({pos:0,smear:.84}))
