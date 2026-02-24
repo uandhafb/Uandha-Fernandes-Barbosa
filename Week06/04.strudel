@@ -16,7 +16,6 @@ $: stack(
   
 ).every(9, x=>x.degradeBy(0.2)).gain(tri.slow(3))
 
-
 $: stack(
   
    note("e1 [e1*2] g1 a1")
@@ -25,7 +24,6 @@ $: stack(
   .cutoff(perlin.fast(5).range(100,6000)).pan(perlin.fast(7))
 
   )
-
 
 $: stack(
   
