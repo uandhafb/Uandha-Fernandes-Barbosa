@@ -1,4 +1,11 @@
+//Fast changes using same pattern
+
+// @title W07-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Mar 02, 2026
+
 shape(999,0.5).color(1,2,1)
-.modulate(noise(999,1.5), 0.1)//.pixelate(2,9999)
+.modulate(noise(999,1.5), 0.1)//.pixelate(2,9999) -> add after noise
 .modulate(osc(2,0.1,2))
  .out()
