@@ -1,0 +1,8 @@
+s0.initImage("https://www.nasa.gov/wp-content/uploads/2026/01/55001995170-87ea2dfa0b-otw.jpg")
+src(s0)
+.repeat(5,10)
+.scale(3)
+.modulate(noise(7,1.5).scale(()=>Math.sin(time)*6),0.01)
+.luma(0.2)
+.out(o0)
+render(o0)
