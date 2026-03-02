@@ -1,3 +1,7 @@
+// @title W07-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Mar 02, 2026
 
 shape(20,0.1,0.01)
   .scale(() => Math.sin(time)*1.5) //change 1.5 - 15
