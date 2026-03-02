@@ -1,0 +1,11 @@
+voronoi(50,1)
+  .luma(0.5).add(shape(1,1).luma(1))
+  .modulate(osc(-1000,-1))
+  .out(o1)
+
+ src(o1)
+.modulateKaleid(voronoi(() => Math.sin(time)*3,0.1,0.01),() => Math.sin(time)*3)
+.scale(() => Math.sin(time)*0.3)
+.out(o2)
+
+render(o2)
