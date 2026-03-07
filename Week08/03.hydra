@@ -1,3 +1,8 @@
+// @title W08-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Mar 06, 2026
+
 shape(2,3)
 .mult(voronoi(90,2))
 .blend(o0).luma()
