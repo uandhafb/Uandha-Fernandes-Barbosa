@@ -1,3 +1,8 @@
+// @title W08-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Mar 09, 2026
+
 osc(40, 0.09, 0.9)
 .color(.9,0,5)
 .modulate(osc(10).rotate(1, 0.5))
