@@ -1,0 +1,14 @@
+osc(40, 0.09, 0.9)
+.color(.9,0,5)
+.modulate(osc(10).rotate(1, 0.5))
+.rotate(1, 0.2)
+.mult(shape(1000,.9,.01).scale(1,.6,1))
+.out(o0)
+
+shape(11).scale(0.3,0.3,0.3)
+.scrollY([0.1,-0.09,0.1,0.1],0)
+.scrollX([0.1,-0.1,0.2],0)
+.color(0.75,0.55,0.75)
+.add(o0).out(o1)
+
+render(o1)
