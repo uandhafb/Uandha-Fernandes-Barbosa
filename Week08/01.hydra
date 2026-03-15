@@ -1,11 +1,11 @@
 // @title W08-01
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by uandha
-// @date Mar 06, 2026
+// @date Mar 15, 2026
 
 osc(15, 0.01, 0.1).modulate(osc(2).rotate(4,1), 20)
-osc(100,-0.01245,1).pixelate(30).kaleid(()=>(Math.sin(time/8)*9+3)).rotate(0,0.125)
-.color(1.3,0.3,1.3)
+osc(100,-0.015,1).pixelate(30).kaleid(()=>(Math.sin(time/8)*9+3)).rotate(0,0.125)
+.colorama(10)
 .saturate(0.4)
 .scale(0.7, 1, 1)
 .out()
