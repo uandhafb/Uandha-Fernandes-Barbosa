@@ -1,14 +1,15 @@
 // @title W08-03
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @by uandha
-// @date Mar 06, 2026
+// @date Mar 15, 2026
 
-shape(2,3)
+shape(3,3)
 .mult(voronoi(90,2))
+//colorama(10)
 .blend(o0).luma()
 .modulatePixelate(noise(50,10),1000)
-.add(shape(3,0.15)
-.rotate(1,1).mult(voronoi(9000,0.5)))
+.add(shape(3,0.15).rotate(1,1).mult(voronoi(9000,0.5)))
+.colorama(20)
 .scrollY([0.1,-0.09,0.1,0.1],0)
 .rotate(5).scrollX([0.1,-0.07,0.1,0.5],0)
 .out()
