@@ -1,3 +1,8 @@
+// @title W09-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Mar 21, 2026
+
 s0.initImage("https://picsum.photos/1920/1080")       // random image - upload random images from this website
 a.show()
 
