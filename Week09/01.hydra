@@ -1,0 +1,29 @@
+s0.initImage("https://picsum.photos/1920/1080")       // random image - upload random images from this website
+a.show()
+
+a.setBins(4)    
+a.setSmooth(0.4)
+a.setCutoff(3)  
+a.setScale(2)
+
+src(s0).mult(osc(21, 1, 2).rotate(1, 0.3), 1)
+.repeat(7,5)
+.mult(shape(9,0.3,0.001)).scale(2.5, 9/16)
+.scrollX(() => time * 0.05).scrollY(() => time * 0.3)
+  //.colorama(0.1)
+.out(o0)
+
+src(o0).mult(osc(21, 1, a.fft[3]).rotate(a.fft[2], 0.3), 1)
+.mult(shape(9,() => a.fft[3] * 0.3 + 0.3,0.001)).scale(2.5, 9/16)
+.scrollX(() => time * 0.05).scrollY(() => time * 0.3)
+.out(o1)
+
+src(o1).add(o1).colorama(1)
+.scroll(()=> time* a.fft[1]*0.2+0.3)  
+.out(o3)
+
+render (o0)
+
+render(o1)
+
+render()
