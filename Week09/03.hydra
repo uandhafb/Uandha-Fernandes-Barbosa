@@ -1,3 +1,8 @@
+// @title W09-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by uandha
+// @date Mar 21, 2026
+
 s0.initCam()
 
 src(s0).modulate(osc())
