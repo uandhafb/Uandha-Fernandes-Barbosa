@@ -1,0 +1,8 @@
+s0.initCam()
+
+src(s0).modulate(osc(10), 0.05)
+  .mult(shape(999).mult(shape(4,0.5).scroll(0.25,0.25).rotate(-3.14/4)
+  .mask(shape(4,10,0)).modulateScale(osc(10,1).color(2,1),-0.5,1).invert()).colorama(0.5))
+  .colorama(0.5)
+  .scrollX(0.3).scrollX(0,0.1)
+  .out()
