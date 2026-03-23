@@ -1,0 +1,6 @@
+s0.initCam()
+src(s0).modulate(noise(0,1.5))
+.mult( osc(20,0, ()=>Math.sin(time*3)*10 ) )
+.mult( noise(15,.3).brightness(0.7).contrast(3)
+    .mult( osc(9,0, ()=>Math.sin(time*33) ).rotate( ()=>time*3 ) )
+).out()
