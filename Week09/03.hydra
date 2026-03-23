@@ -1,0 +1,8 @@
+s0.initCam()
+
+src(s0).modulate(osc())
+  .mult(shape(4))
+  .modulateScrollY(osc(3,1),0.5)
+  .colorama(0.1)
+  // .pixelate(21,10)
+  .out()
